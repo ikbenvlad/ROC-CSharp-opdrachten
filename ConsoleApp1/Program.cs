@@ -11,9 +11,10 @@ namespace ConsoleApp1
                 // vraag om kleur
                 Console.WriteLine("hoi, welke kleur wil je dat de console wordt? (Engelse namen kunnen ook worden gebruikt)");
 
-                // sla kleur op, dus zoiets: x = console.readline
+                // sla kleur op, maakt het continu gebruikbaar
                 string input = Console.ReadLine()?.ToLower();
 
+                // stopt het programma
                 if (input == "stop")
                 {
                     Console.WriteLine("het programma wordt nu gestopt");
