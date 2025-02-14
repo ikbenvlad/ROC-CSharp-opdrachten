@@ -20,24 +20,30 @@ namespace ConsoleApp1
                     Console.WriteLine("het programma wordt nu gestopt");
                     break;
                 }
-                
+
                 // alle kleuren die gebruikt worden.
-                if (input == "rood" || input == "red")
+                switch (input)
                 {
-                    Console.WriteLine("Het wordt nu groen");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                } else if (input == "groen" || input == "green")
-                {
-                    Console.WriteLine("Fuck jou het wordt rood");
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                }else if (input == "paars" || input == "purple" || input == "magenta")
-                {
-                    Console.WriteLine("De console wordt nu paars");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
-                } else if (input != "rood" || input != "red" || input != "groen" || input != "green")
-                {
-                    Console.WriteLine("Het wordt toch paars");
-                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    case "rood":
+                    case "red":
+                        Console.WriteLine("De console wordt nu rood");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        break;
+                    case "groen":
+                    case "green":
+                        Console.WriteLine("De console wordt nu groen");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        break;
+                    case "paars":
+                    case "purple":
+                    case "magenta":
+                        Console.WriteLine("De console wordt nu paars");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        break;
+                    default:
+                        Console.WriteLine("Het wordt toch paars");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        break;
                 }
             }
         }
